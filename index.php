@@ -56,7 +56,7 @@ $body .= "<div class='newsarticle_text'>Welcome to the CyniForum install/repair 
 $pg->setTag( "LOCATION", ".." );
 $pg->setTag( "TITLE", "Cyni Forums Installation" );
 $pg->setTag( "BODY", "<div class='newsarticle'>$body</div>" );
-$pg->setTag( "HEAD", "<img src='../images/forum_logo.png' class='logo' />" );
+$pg->setTag( "HEAD", "<img src='images/forum_logo.png' class='logo' />");
 $pg->setTag( "FOOT", "" );
 
 $pg->showPage();
