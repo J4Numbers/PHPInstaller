@@ -1,0 +1,280 @@
+body {
+	background-color:#E2E2E2;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.column{
+	background-color: rgb(240,240,255);
+	padding: 5px;
+	height: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	min-width: 1100px;
+	max-width: 1100px;
+	position: relative;
+}
+
+.menu{
+
+	top: 0;
+	vertical-align: top;
+
+}
+
+.login{
+	position: relative;
+	background-color: rgba(225, 225, 225, 0.62);
+	padding: 5px;
+	border: 2px #444444;
+	border-radius: 5px;
+	width: 210px;
+	height: 100px;
+}
+
+textarea {
+	width: 98%;
+	resize: vertical;
+}
+
+.login_box{
+	margin: 0;
+	width: 250px;
+}
+
+.login_table{
+	font: 12px 'Titillium Web', sans-serif;
+	position: inherit;
+}
+
+.log_input{
+	width: 100px;
+}
+
+.log_field{
+	font: 12px 'Titillium Web', sans-serif;
+}
+
+.header {
+	background-color: rgb(150,150,185);
+	width:100%;
+	height: 120px;
+}
+
+.header_logo {
+	width: 100px;
+}
+
+img.logo {
+	position: relative;
+	float: left;
+	height: 50px;
+	padding: 10px;
+}
+
+.menuItem{
+	background-color: rgb(100,100,100);
+	padding: 10px;
+	margin-left: 10px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	min-width: auto;
+	max-width: 100px;
+	text-align: right;
+	border-style: ridge;
+	border-width: 2px;
+	border-top-width: 0px;
+	border-color: rgb(200,200,200);
+	color: white;
+	font: 20px Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.menuItem:hover{
+	background-color: rgb(240,240,240);
+	padding: 10px;
+	margin-left: 10px;
+	padding-bottom:20px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	min-width: auto;
+	max-width:100px;
+	text-align:right;
+	border-style:ridge;
+	border-width:2px;
+	border-top-width:0px;
+	border-color:rgb(100,100,100);
+	color:rgb(75,75,75);
+	font: 20px Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.main{
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+table.user_profile {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.user_words{
+	width: 200px;
+	border: 2px #1F1F1F;
+}
+
+.user_avat{
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.user_name{
+	text-align: center;
+	font: 19px bold;
+}
+
+.user_rank{
+	text-align: center;
+	opacity: 0.85;
+}
+
+.user_prim_gr{
+	text-align: center;
+}
+
+.user_reg_date{
+	color: rgba(42,42,42,0.85);
+	text-align: center;
+}
+
+.news_avatar {
+	float:left;
+	position: relative;
+	z-index: 100;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(155,155,155);
+	text-align: center;
+	line-height: 50px;
+}
+
+.news_avatar > img {
+	display:inline-block;
+	width:48px;
+	height:48px;
+}
+
+.newsarticle {
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right: 0;
+	min-width:100%;
+	max-width:100%;
+	vertical-align:top;
+	border: 1px solid #9B9B9B;
+}
+
+.newsarticle_header h1 {
+	color:#444;
+	background-color: #c6c6c6;
+	padding-left: 10px;
+	font-family: 'Titillium Web', sans-serif;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.15);
+	margin: 0;
+}
+
+.newsarticle_text {
+	text-align: justify;
+	padding:10px;
+	background-color: rgb(240,240,255);
+	font-family: sans-serif;
+	font-size: 10pt;
+}
+
+.newsarticle_footer {
+	border-top:2px solid rgb(155,155,155);
+	padding:10px;
+	text-align:right;
+	background-color: rgb(190,190,190);
+	font: 14px Veranda, sans-serif;
+}
+
+.heading{
+	width: 100%;
+}
+
+.table_of_things {
+	margin: 0 auto;
+	border: 1px #9B9B9B;
+}
+
+.buttons {
+	text-align: center;
+}
+
+.field_name {
+	font: 15px bold 'Arial Black', sans-serif;
+	color: #464646;
+}
+
+.hint {
+	font: 12px bold;
+}
+
+input.input {
+	width: 200px;
+}
+
+select.input {
+	width: 200px;
+}
+
+#overlay_contents {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background-color: rgba(255, 255, 255, 1);
+	width: 300px;
+	height: auto !important;
+	display: none;
+	margin-left: -100px;
+	margin-top: -25px;
+	z-index: 501;
+	padding: 1px;
+	border: 15px solid rgba(0,0,0,0.3);
+	background-clip: padding-box;
+	text-align: center;
+}
+
+#overlay_contents < img {
+	margin: 0;
+}
+
+#overlay_text{
+	text-align: inherit;
+	margin: 0;
+	align-content: center;
+}
+
+#overlay_failure{
+	color: red;
+}
+
+.overlay_config{
+	text-align: left;
+	background-color: #b9c696;
+	border: 1px solid black;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(34, 34, 34, 0.78);
+	display: none;
+	z-index: 500;
+}
