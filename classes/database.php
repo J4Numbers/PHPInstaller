@@ -32,7 +32,7 @@ class database {
 
 	private $pdo_base;
 	private $prefix;
-	
+
 	public function __construct( $home_dir ) {
 
 		if ( !file_exists("$home_dir/config/props.php"))
@@ -309,30 +309,30 @@ class database {
 
 		try {
 			if ($this->checkTableExists("bbcode" ) &&
-					$this->checkTableExists("cat_group_permissions") &&
-					$this->checkTableExists("cat_user_permissions") &&
-					$this->checkTableExists("categories") &&
-					$this->checkTableExists("config") &&
-					$this->checkTableExists("forum_group_permissions") &&
-					$this->checkTableExists("forum_user_permissions") &&
-					$this->checkTableExists("forums") &&
-					$this->checkTableExists("group_permissions") &&
-					$this->checkTableExists("group_status") &&
-					$this->checkTableExists("groups") &&
-					$this->checkTableExists("permissions") &&
-					$this->checkTableExists("posts") &&
-					$this->checkTableExists("private_messages") &&
-					$this->checkTableExists("private_messages_group_mailing_list") &&
-					$this->checkTableExists("private_messages_user_mailing_list") &&
-					$this->checkTableExists("ranks") &&
-					$this->checkTableExists("status_permissions") &&
-					$this->checkTableExists("thread_group_permissions") &&
-					$this->checkTableExists("thread_user_permissions") &&
-					$this->checkTableExists("threads") &&
-					$this->checkTableExists("user_groups") &&
-					$this->checkTableExists("user_meta") &&
-					$this->checkTableExists("user_permissions") &&
-					$this->checkTableExists("users") )
+				$this->checkTableExists("cat_group_permissions") &&
+				$this->checkTableExists("cat_user_permissions") &&
+				$this->checkTableExists("categories") &&
+				$this->checkTableExists("config") &&
+				$this->checkTableExists("forum_group_permissions") &&
+				$this->checkTableExists("forum_user_permissions") &&
+				$this->checkTableExists("forums") &&
+				$this->checkTableExists("group_permissions") &&
+				$this->checkTableExists("group_status") &&
+				$this->checkTableExists("groups") &&
+				$this->checkTableExists("permissions") &&
+				$this->checkTableExists("posts") &&
+				$this->checkTableExists("private_messages") &&
+				$this->checkTableExists("private_messages_group_mailing_list") &&
+				$this->checkTableExists("private_messages_user_mailing_list") &&
+				$this->checkTableExists("ranks") &&
+				$this->checkTableExists("status_permissions") &&
+				$this->checkTableExists("thread_group_permissions") &&
+				$this->checkTableExists("thread_user_permissions") &&
+				$this->checkTableExists("threads") &&
+				$this->checkTableExists("user_groups") &&
+				$this->checkTableExists("user_meta") &&
+				$this->checkTableExists("user_permissions") &&
+				$this->checkTableExists("users") )
 
 				return true;
 
@@ -428,7 +428,7 @@ class database {
 	public function getInfoAboutJoinedGroupWithIds( $groupId, $userId ) {
 
 		$arrayOfVars = array( ":groupId" => $groupId,
-								":userId" => $userId );
+			":userId" => $userId );
 
 		$sql = "SELECT `u_groups`.`group_id`,`group_name`,`group_color`,`group_info`,`joined_on`,`status_id` FROM `@user_groups` AS `u_groups` INNER JOIN `@groups` AS `groups` ON `u_groups`.`group_id`=`groups`.`group_id` WHERE (`u_groups`.`user_id`=:userId AND `u_groups`.`group_id`=:groupId)";
 
@@ -634,12 +634,12 @@ class database {
 		if ($this->checkUsernameExists($username)) {
 
 			$arrayOfVars = array( ":username" => $username,
-									":casedUsername" => strtolower($username),
-									":userEmail" => $email,
-									":userPass" => $password,
-									":times1" => time(),
-									":times2" => $hashTime,
-									":timezone" => $timezone) ;
+				":casedUsername" => strtolower($username),
+				":userEmail" => $email,
+				":userPass" => $password,
+				":times1" => time(),
+				":times2" => $hashTime,
+				":timezone" => $timezone) ;
 
 			$sql = "INSERT INTO `@users` (`username`,`username_cased`,`user_email`,`password`,
 					`time_reg`,`time_pass_altered`,`user_timezone`) VALUES (:username,
@@ -657,7 +657,7 @@ class database {
 				$arrayOfVars2 = array( ":userId" => $lastId );
 
 				$arrayOfVars3 = array( ":userId" => $lastId,
-										":times" => time() );
+					":times" => time() );
 
 				$this->executePreparedStatement($this->makePreparedStatement($sql2),$arrayOfVars2);
 				$this->executePreparedStatement($this->makePreparedStatement($sql3),$arrayOfVars3);
@@ -685,7 +685,7 @@ class database {
 	public function insertExistingAdmin( $userId ) {
 
 		$arrayOfVars1 = array( ":userId"=>$userId,
-								":joined"=>time());
+			":joined"=>time());
 		$arrayOfVars2 = array( ":userId"=>$userId);
 
 		$sql1 = "INSERT INTO `@user_groups` (`user_id`,`group_id`,`joined_on`,
